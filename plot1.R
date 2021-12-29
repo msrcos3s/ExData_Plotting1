@@ -10,8 +10,8 @@ library(ggplot2)
         
 full_data <- read.table("./household_power_consumption.txt", stringsAsFactors = FALSE, header = TRUE, sep =";")
 
-## changing class of all variables to numeric
-
+## changing class of variables 
+        
 full_data$Date <- as.Date(full_data$Date, format="%d/%m/%Y")
 full_data$Time <- format(full_data$Time, format="%H:%M:%S")
 full_data$Global_active_power <- as.numeric(full_data$Global_active_power)
